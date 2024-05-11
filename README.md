@@ -4,7 +4,7 @@ Microsense Vision HandiMote SDK example
 Description : 
 Basic handimote python data connect example SDK.
 ```
-/HandiMoteSDK
+/HandiMoteSDK/HandiMoteConnect_Without_Dashboard/
 |-- ble_device.py
 |-- config.py
 |-- notification_handler.py

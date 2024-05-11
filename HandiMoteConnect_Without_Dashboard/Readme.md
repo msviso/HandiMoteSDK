@@ -31,7 +31,7 @@ Import SDK Components
 
 First, ensure you import the necessary components from the SDK:
 
-```
+``` python
 from utilities import scan_for_devices, connect_to_device
 from ble_device import BLEDevice
 from config import UUID_GRAY_LEVEL_IMAGE, UUID_6DOF_MOTION_SENSOR
@@ -40,7 +40,7 @@ from config import UUID_GRAY_LEVEL_IMAGE, UUID_6DOF_MOTION_SENSOR
 ## Initialize Device Connection
 Scan for available devices and connect to the desired BLE device:
 
-```
+``` python
 devices = await scan_for_devices("HandiMote")
 client = None
 if devices:
@@ -50,7 +50,7 @@ if devices:
 ## Start Notifications
 Use the BLEDevice class to handle device interactions:
 
-```
+``` python
 if client:
     ble_device = BLEDevice(client)
     if await ble_device.connect():
@@ -60,14 +60,14 @@ if client:
 ## Collect Gray Level Image Data
 Start receiving data from the gray level image matrix:
 
-```
+``` python
 await ble_device.start_notifications(UUID_GRAY_LEVEL_IMAGE, data_collector.handle_gray_level_image_data)
 print("Started notifications for Gray Level Image Data.")
 ```
 ## Collect Motion Data
 Similarly, start receiving data from the motion sensor:
 
-```
+``` python
 gray_image_data = data_collector.get_all_gray_image_data()
 motion_data = data_collector.get_all_motion_data()
 ```
@@ -75,7 +75,7 @@ motion_data = data_collector.get_all_motion_data()
 ## Stop Notifications
 To stop receiving data from the device:
 
-```
+``` python
 await ble_device.stop_notifications(UUID_GRAY_LEVEL_IMAGE)
 await ble_device.stop_notifications(UUID_6DOF_MOTION_SENSOR)
 print("Stopped all notifications.")
@@ -84,7 +84,7 @@ print("Stopped all notifications.")
 ## Disconnect
 Finally, ensure you disconnect from the device properly:
 
-```
+``` python
 await ble_device.disconnect()
 print("Device disconnected.")
 ```

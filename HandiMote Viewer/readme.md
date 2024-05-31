@@ -2,6 +2,8 @@
 
 `HandiMote Viewer` is an application designed to display and analyze motion and image data received from the HandiMote device. This application includes three main features: OpenCV image processing, motion cube display, and motion tracking path and history.
 
+![image](Images\HandiMoteViewerConsole.png)
+
 ## Code Structure
 HandiMote Viewer/
 

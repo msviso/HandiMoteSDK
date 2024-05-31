@@ -73,6 +73,10 @@ The application receives quaternion data from the HandiMote device and converts 
 
 The application records the motion path of the device and displays these paths in 3D space. The motion path is updated in real-time based on the device's motion, showing the movement history of the last 3 seconds.
 
+### Image Saving for OpenCV Training
+
+The application allows users to capture the current grayscale image and save it as both a binary file and a PNG file. This feature is useful for collecting data for OpenCV training. When the capture button is pressed, the image is saved in the `captured_images` folder with a timestamp.
+
 ## Contribution
 
 Contributions to this project are welcome! If you have any suggestions or find any issues, please submit an issue or a pull request.

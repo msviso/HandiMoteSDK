@@ -59,7 +59,7 @@ HandiMote Viewer/
     Run the main application:
 
     ```sh
-    python example_usage.py
+    python handiMoteViewer.py
     ```
 
 ## Application Description

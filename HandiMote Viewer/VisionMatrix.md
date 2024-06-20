@@ -2,6 +2,8 @@
 
 Our vision data matrix is 24x20 pixels in size, with each pixel represented by 8 bits (1 byte). This matrix includes data for the user's five fingers in a fixed position relative to the user's palm. Note that only a 24x17 area of the matrix is active; the first 3 rows should be skipped during data analysis. Below is an explanation of how to interpret and use this data.
 
+![Vision Data Matrix](Images/visionformat.png)
+
 ## Vision Data Matrix Structure
 
 1. **Matrix Size**: 24 rows x 20 columns, with each element being 8 bits (1 byte).

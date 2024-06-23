@@ -3,6 +3,8 @@
 
 This is a data collection and synchronization tool for HandiMote landmark training using Mediapipe. It collects and stores motion data, vision data, and hand landmarks from Mediapipe. Ensure your Python-running PC has camera module support.
 
+![HamdiMote Data Collector Console](handimoteDataCollector.png)
+
 ## Features
 
 - Connects to the specified BLE device

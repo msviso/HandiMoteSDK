@@ -53,7 +53,7 @@ def load_data(sensor_dir, landmark_dir):
 
     return np.array(sensor_data), np.array(landmark_data)
 
-# 主訓練函數
+# 主訓練和轉換函數
 def main():
     # 請求使用者選擇根目錄
     root = tk.Tk()
@@ -95,6 +95,21 @@ def main():
     # 保存模型
     model.save(model_path)
     print("模型保存至", model_path)
+
+    # 創建一個 tf.function 並設置 input_signature
+    @tf.function(input_signature=[tf.TensorSpec(shape=[None, 17, 24, 1], dtype=tf.float32)])
+    def model_func(inputs):
+        return model(inputs)
+
+    # 將模型轉換為 TensorFlow Lite 格式
+    converter = tf.lite.TFLiteConverter.from_concrete_functions([model_func.get_concrete_function()])
+    tflite_model = converter.convert()
+
+    # 保存 TFLite 模型
+    tflite_model_path = 'hand_landmark_model.tflite'
+    with open(tflite_model_path, 'wb') as f:
+        f.write(tflite_model)
+    print("模型已轉換並保存至", tflite_model_path)
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,5 @@
 
-# HandiMote Data Collector
+# HandiMote Viewer V03
 
 HandiMote Data Collector is an application for collecting and displaying gesture and motion data. It can retrieve gesture data from a BLE device, process it using a TensorFlow Lite model, and display it in the application interface. Additionally, it displays a motion cube and motion path based on motion data.
 

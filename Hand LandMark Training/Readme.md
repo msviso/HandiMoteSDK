@@ -1,4 +1,10 @@
 
+## HandiMote Hand's Landmark Training Flow
+
+![HandiMote Data Training Flow](Images/handimoteTrainFlow.png)
+
+
+
 # HandiMote Data Collector
 
 This is a data collection and synchronization tool for HandiMote landmark training using Mediapipe. It collects and stores motion data, vision data, and hand landmarks from Mediapipe. Ensure your Python-running PC has camera module support.

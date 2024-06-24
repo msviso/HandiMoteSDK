@@ -2,7 +2,7 @@
 ## HandiMote Hand's Landmark Training Flow
 
 - [HandiMote Data Collector](#HandiMote-Data-Collector)
-- [Training](#)
+- [Training](#Data-Training-(Tensorflow))
 - [HandiMote Landmark Console](#)
 
 
@@ -78,6 +78,8 @@ python HandimoteTrainDataCollection.py
 * Once connected, it will start displaying hand landmarks and connections.
 * Click the Capture Data button to save the current hand landmarks and motion data.
 
+![Distance between wrist to thumb mcp](Images/HandRescale.png)
+
 4, Data Storage
 
 Data will be stored in a folder named after the batch name, with the following structure:
@@ -103,6 +105,16 @@ hands = mp_hands.Hands(
     min_detection_confidence=0.7,
     min_tracking_confidence=0.5
 )
+```
+
+## Data Training (Tensorflow)
+
+
+Once the data collector captures the sample data, we can start training the TensorFlow model by running training.py. This Python script will generate the TensorFlow Lite model in the specified folder. When the script is executed, it will prompt you to select the root directory (batch_name) of the sample data. The script will then search for the corresponding files in this directory and begin the training process. We can use this model for the HandiMote Viewer V3 application demo.
+
+```plaintext
+handimote-data-collector/
+├── HandiMote.tflite      # Tensorflow-model output
 ```
 
 ## Notes

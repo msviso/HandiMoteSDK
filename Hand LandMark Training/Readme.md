@@ -16,6 +16,20 @@ This is a data collection and synchronization tool for HandiMote landmark traini
 - Connects to the specified BLE device
 - Real-time display of hand landmarks and connections
 - Stores hand landmark, motion, and vision data
+- 
+## Files Structure
+
+```plaintext
+handimote-data-collector/
+├── HandiMote_LandmarkConsole.py      # Main application
+├── utilities.py                      # Utility functions for handling BLE data
+├── ble_device.py                     # BLE device connection and data handling
+├── motion_processor.py               # Motion data processing
+├── config.py                         # Configuration file, including UUIDs
+├── requirements.txt                  # List of required Python packages
+├── README.md                         # Application instructions
+└── add.h                             # File containing device address
+```
 
 ## Requirements
 
@@ -61,7 +75,7 @@ python HandimoteTrainDataCollection.py
 4, Data Storage
 
 Data will be stored in a folder named after the batch name, with the following structure:
-```php
+```plaintext
 ├── <batch_name>
     ├── vision
     │   └── vision_data_<timestamp>_<batch_name>.bin
@@ -88,6 +102,5 @@ hands = mp_hands.Hands(
 ## Notes
 Ensure your camera is working properly and there is sufficient lighting to improve the accuracy of hand landmark detection.
 If the program cannot connect to the BLE device, verify that the device address is correct and that the BLE device is discoverable.
-
 
 

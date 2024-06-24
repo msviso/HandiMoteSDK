@@ -1,7 +1,13 @@
 
 ## HandiMote Hand's Landmark Training Flow
 
+- [HandiMote Data Collector](#HandiMote-Data-Collector)
+- [Training](#)
+- [HandiMote Landmark Console](#)
+
+
 ![HandiMote Data Training Flow](Images/handimoteTrainFlow.png)
+
 
 
 
